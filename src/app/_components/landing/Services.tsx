@@ -1,10 +1,105 @@
 "use client";
-import React from "react";
-
-
+import React, { useRef, useEffect } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Services = () => {
-const engagements = [
+  // Refs for scroll animations
+  const engagementRef = useRef(null);
+  const sponsorRef = useRef(null);
+  const isEngagementInView = useInView(engagementRef, { once: false, amount: 0.2 });
+  const isSponsorInView = useInView(sponsorRef, { once: false, amount: 0.2 });
+  const engagementControls = useAnimation();
+  const sponsorControls = useAnimation();
+  
+  // Animation variants
+  const sectionVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+  
+  const titleVariants = {
+    hidden: { opacity: 0, y: -30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.8, 
+        ease: "easeOut" 
+      },
+    },
+  };
+  
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.6, 
+        delay: 0.3,
+        ease: "easeOut" 
+      },
+    },
+  };
+  
+  const gridVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.4,
+      },
+    },
+  };
+  
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { 
+        duration: 0.5, 
+        ease: "easeOut" 
+      },
+    },
+  };
+  
+  const iconVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { 
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+        delay: 0.1
+      },
+    },
+  };
+  
+  const quoteVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { 
+        duration: 0.8, 
+        delay: 0.8,
+        ease: "easeOut" 
+      },
+    },
+  };
+
+  const engagements = [
     {
       icon: (
         <svg
@@ -62,7 +157,7 @@ const engagements = [
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998a12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
           />
         </svg>
       ),
@@ -134,6 +229,7 @@ const engagements = [
         "Notre projet est fait pour inspirer, rassembler, soigner et redonner.",
     },
   ];
+  
   const benefits = [
     {
       icon: (
@@ -199,75 +295,156 @@ const engagements = [
         "Associez votre image à la nôtre dans une aventure humaine à fort impact social et environnemental.",
     },
   ];
+
+  // Trigger animations when sections come into view
+  useEffect(() => {
+    if (isEngagementInView) {
+      engagementControls.start("visible");
+    } else {
+      engagementControls.start("hidden");
+    }
+    
+    if (isSponsorInView) {
+      sponsorControls.start("visible");
+    } else {
+      sponsorControls.start("hidden");
+    }
+  }, [isEngagementInView, isSponsorInView, engagementControls, sponsorControls]);
+
   return (
     <div id="our-services" className="">
-      <section
+      <motion.section
         id="engagement"
         className="section-padding bg-light dark:bg-gray-700 relative overflow-hidden"
+        ref={engagementRef}
+        initial="hidden"
+        animate={engagementControls}
+        variants={sectionVariants}
       >
         <div className="absolute inset-0 bg-dunes-pattern opacity-5"></div>
         <div className="container-custom relative z-10">
           <div className="text-center mb-12">
-            <h2 className="lg:text-7xl text-3xl">AU-DELÀ DE LA COURSE</h2>
-            <p className="text-lg max-w-3xl mx-auto mt-4 text-gray-500 dark:text-gray-50">
+            <motion.h2 
+              className="lg:text-7xl text-3xl"
+              variants={titleVariants}
+            >
+              AU-DELÀ DE LA COURSE
+            </motion.h2>
+            <motion.p 
+              className="text-lg max-w-3xl mx-auto mt-4 text-gray-500 dark:text-gray-50"
+              variants={textVariants}
+            >
               Au-delà de la course, &quot;Les Joueuses&quot; s&apos;engagent à
               mobiliser leur entourage, leur ville et leur pays.
-            </p>
+            </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:py-8 lg:px-8 py-4 px-4">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:py-8 lg:px-8 py-4 px-4"
+            variants={gridVariants}
+          >
             {engagements.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white dark:bg-gray-900 rounded-lg p-6  border-primary border-2 shadow-md hover:shadow-lg transition-shadow"
+                className="bg-white dark:bg-gray-900 rounded-lg p-6 border-primary border-2 shadow-md hover:shadow-lg transition-all"
+                variants={cardVariants}
+                whileHover={{ 
+                  y: -10, 
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                  borderColor: "#FCBA03",
+                  transition: { duration: 0.2 }
+                }}
               >
-                <div className="text-primary mb-4">{item.icon}</div>
+               <motion.div 
+                  className="text-primary mb-4 flex justify-center"
+                  variants={iconVariants}
+                  whileHover={{ 
+                    rotate: 360,
+                    transition: { duration: 0.8, ease: "easeInOut" }
+                  }}
+                >
+                  {item.icon}
+                </motion.div>
                 <h3 className="text-xl font-montserrat font-bold text-secondary dark:text-gray-50 mb-2">
                   {item.title}
                 </h3>
                 <p className="text-dark dark:text-slate-50">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
-          <div className="mt-16 text-center">
+          <motion.div 
+            className="mt-16 text-center"
+            variants={quoteVariants}
+          >
             <blockquote className="text-2xl font-montserrat italic text-secondary dark:text-slate-50 max-w-3xl mx-auto">
               &quot;Notre aventure est collective. Elle est faite pour inspirer,
               rassembler, soigner et redonner.&quot;
             </blockquote>
-          </div>
+          </motion.div>
         </div>
-      </section>
-      <section id="pourquoi" className="section-padding bg-white dark:bg-dark">
+      </motion.section>
+      
+      <motion.section 
+        id="pourquoi" 
+        className="section-padding bg-white dark:bg-dark"
+        ref={sponsorRef}
+        initial="hidden"
+        animate={sponsorControls}
+        variants={sectionVariants}
+      >
         <div className="container-custom">
           <div className="text-center my-12">
-            <h1 className="lg:text-7xl text-3xl">POURQUOI NOUS SPONSORISER ?</h1>
-            <p className="text-lg max-w-3xl mx-auto mt-4 text-gray-500 dark:text-white">
+            <motion.h1 
+              className="lg:text-7xl text-3xl"
+              variants={titleVariants}
+            >
+              POURQUOI NOUS SPONSORISER ?
+            </motion.h1>
+            <motion.p 
+              className="text-lg max-w-3xl mx-auto mt-4 text-gray-500 dark:text-white"
+              variants={textVariants}
+            >
               Soutenez une équipe engagée et bénéficiez d&apos;une visibilité
               exceptionnelle.
-            </p>
+            </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:py-8 lg:px-8 py-4 px-4">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:py-8 lg:px-8 py-4 px-4"
+            variants={gridVariants}
+          >
             {benefits.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="text-center shadow-lg p-6 rounded-lg border-primary border-2 bg-white dark:bg-gray-800  transition-colors"
+                className="text-center shadow-lg p-6 rounded-lg border-primary border-2 bg-white dark:bg-gray-800 transition-all"
+                variants={cardVariants}
+                whileHover={{ 
+                  scale: 1.05, 
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                  borderColor: "#FCBA03",
+                  transition: { duration: 0.2 }
+                }}
               >
-                <div className="text-primary mb-4 flex justify-center">
+                <motion.div 
+                  className="text-primary mb-4 flex justify-center"
+                  variants={iconVariants}
+                  whileHover={{ 
+                    rotate: 360,
+                    transition: { duration: 0.8, ease: "easeInOut" }
+                  }}
+                >
                   {item.icon}
-                </div>
+                </motion.div>
                 <h3 className="text-xl font-montserrat font-bold text-secondary dark:text-slate-50 mb-3">
                   {item.title}
                 </h3>
                 <p className="text-dark dark:text-gray-50">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
-          </div>
-
-         
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
