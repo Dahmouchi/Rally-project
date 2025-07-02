@@ -28,7 +28,7 @@ const NavBar = () => {
           className="lg:absolute top-0 left-0 flex items-center  rtl:space-x-reverse lg:px-12 lg:py-7 lg:z-50 rounded-r-2xl lg:bg-white lg:dark:bg-dark"
         >
           <img
-            src="/Picture1.jpg"
+            src="/logo.png"
             className="lg:w-44 w-24 h-auto"
             alt="RZ Logo"
           />
