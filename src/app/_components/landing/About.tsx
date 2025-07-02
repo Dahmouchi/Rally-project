@@ -1,14 +1,34 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-const stats = [
-  { value: "12+", description: "Year>s of Industry Expertise" },
-  { value: "100%", description: "Client-Centric Approach" },
-  { value: "10+", description: "Tailored Solutions for Sustainable Growth" },
-  {
-    value: "120+",
-    description: "Extensive Network of Hospitality Professionals",
-  },
-];
+
 const About = () => {
+  const advantages = [
+    {
+      number: "01",
+      title: "L'ORIGINALITÉ DU SPONSORING D'UN CHALLENGE FÉMININ",
+      description:
+        "Communiquez sur l'engagement de votre entreprise à promouvoir le sport féminin ainsi qu'à l'association du RAG cœur des gazelles tournée vers la protection des femmes. Notre équipage est engagée envers les enfants nomades pour leur scolarité et aboutissement de leurs cursus universitaires et les inclusions et indépendances financières.",
+    },
+    {
+      number: "02",
+      title: "LA COUVERTURE MÉDIA DE NOTRE ÉQUIPAGE",
+      description:
+        "Bénéficiez d'une visibilité sur les supports médias : Réseaux sociaux, site internet, newsletters, visuel sur nos véhicules, articles dans journaux locaux, et plus encore.",
+    },
+    {
+      number: "03",
+      title: "UN AVANTAGE FISCAL",
+      description:
+        "Les sommes versées par les entreprises sont considérées comme des dépenses destinées à promouvoir l'image de leur entreprise et sont des charges déductibles de leur revenu imposable.",
+    },
+    {
+      number: "04",
+      title:
+        "L'ASSOCIATION DE L'IMAGE DU SPONSOR À UN CONCEPT VALORISANT ET DYNAMIQUE",
+      description:
+        "Le Rallye Aïcha des Gazelles est reconnu mondialement pour son concept unique de navigation à l'ancienne, seul rallye automobile certifié ISO 14001.",
+    },
+  ];
   return (
     <div className="lg:py-8 lg:px-8 py-4 px-4" id="about-us">
       <div className="bg-gradient-to-r relative from-main2 via-main to-main2 lg:rounded-3xl rounded-xl text-white lg:py-16 lg:px-16 px-4 py-4 bg-cover lg:bg-center">
@@ -17,84 +37,37 @@ const About = () => {
           alt=""
           className="w-full h-full absolute top-0 "
         />
-
         <div>
           <div className="flex gap-2 items-center">
             <div className="w-3 h-3 rounded-full bg-second"></div>
-            <h1 className="text-lg"> About us</h1>
+            <h1 className="text-lg"> MAIS ENCORE...</h1>
           </div>
 
           <div className="w-full h-[2px] bg-white lg:my-4 my-2"></div>
         </div>
-        <div className="flex lg:flex-row flex-col lg:items-start lg:justify-between">
-          <div className="flex flex-col lg:gap-8 gap-6 lg:w-1/2 lg:text-lg text-sm">
-            <h1 className="text-second lg:text-5xl text-3xl">
-              <span className="bg-gradient-to-r from-main3 to-gray-500 inline-block text-transparent bg-clip-text mr-2">
-                At{" "}
-              </span>
-              <span className="bg-gradient-to-r from-text2 via-text to-text2 inline-block text-transparent bg-clip-text">
-                {" "}
-                RZ Hospitality,
-              </span>{" "}
-            </h1>
-            {/*<h1>
-              <span className="font-bold mr-2">Who We Are :</span> We&apos;re
-              not your typical consultants. We&apos;re architects of
-              possibility, partners in progress, and relentless problem-solvers.
-              Whether you&pos;re a boutique hotel, a buzzing brunch spot, or a
-              neighborhood bar, we craft tailored solutions that blend
-              creativity with razor-sharp commercial savvy.
-            </h1>
-
-            <h1 className="whitespace-pre-line">
-              <span className="font-bold mr-2">What We Deliver :</span>
-              Revenue Revolution: Unlock hidden profits with dynamic pricing,
-              market-smart positioning, and guest-centric upselling.
-              <br />
-              - Operational Alchemy: Streamline workflows, slash costs, and
-              integrate tech that works harder so your team doesn&apos;t have
-              to.
-              <br />
-              - Talent That Thrives: Build teams that embody your brand&apos;s
-              soul—through recruitment, training, and retention strategies that
-              stick.
-              <br />- Future-Ready Strategy: Anticipate trends, pivot fast, and
-              stay ahead in an industry that never sleeps.
-            </h1>
-
-            <h1 className="whitespace-pre-line">
-              <span className="font-bold mr-2">Why We&apos;re Different :</span>
-              Decades of Grit, Not Just Theory: We&apos;ve walked in your
-              shoes—crises, grand openings, rebrands—and we know what works.
-              <br />
-              Global Expertise, Local Heart: Our network spans industry leaders
-              worldwide, but our solutions are laser-focused on your community.
-              <br />
-              No Fluff, All Action: We skip the jargon and deliver clear,
-              measurable results—higher profits, happier guests, smoother
-              operations.
-              
-            </h1>
-
-            <h1>
-              💡Ready to rewrite your story?{" "}
-              <span className="font-bold mr-2">Let&apos;s start today</span>
-            </h1>
-            <span className="font-bold mr-2">RZ Hospitality: Where Vision Meets Mastery.</span>
- */}
-          </div>
-          <div>
-            <div className="max-w-4xl mx-auto grid lg:grid-cols-1 md:grid-cols-2 grid-cols-2 lg:gap-12 gap-3 lg:px-6 my-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="flex flex-col">
-                  <h1 className="lg:text-5xl text-2xl font-semibold">
-                    {stat.value}
-                  </h1>
-                  <p className="lg:text-lg text-sm mt-2">{stat.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {advantages.map((item, index) => (
+              <div
+                key={index}
+                className="bg-secondary bg-opacity-50 backdrop-blur-sm p-6 rounded-lg border border-primary border-opacity-30 hover:border-opacity-100 transition-all"
+              >
+                <div className="flex items-start">
+                  <div className="bg-primary rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                    <span className="text-white font-montserrat font-bold">
+                      {item.number}
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-montserrat font-bold text-white mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-white text-opacity-90">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            ))}
         </div>
       </div>
     </div>

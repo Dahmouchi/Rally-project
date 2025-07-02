@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -11,8 +12,9 @@ const NavBar = () => {
 
   // Define the navigation links
   const navLinks = [
-    { name: "Our services", href: "#our-services" },
-    { name: "About US", href: "#about-us" },
+    { name: "Accueil", href: "#hero" },
+    { name: "L'Équipage", href: "#about-uss" },
+    { name: "Notre Cause", href: "#our-services" },
     { name: "Gallery", href: "#Gallery" },
     { name: "Testimonials", href: "#Testimonials" },
     { name: "FAQ", href: "#FAQ" },
@@ -27,7 +29,7 @@ const NavBar = () => {
           className="lg:absolute top-0 left-0 flex items-center  rtl:space-x-reverse lg:px-12 lg:py-7 lg:z-50 rounded-r-2xl lg:bg-white lg:dark:bg-dark"
         >
           <img
-            src="/images/logo.png"
+            src="/Picture1.jpg"
             className="lg:w-44 w-24 h-auto"
             alt="RZ Logo"
           />

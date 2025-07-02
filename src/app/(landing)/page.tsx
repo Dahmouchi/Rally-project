@@ -13,11 +13,13 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      
       <Quotes />
+      <Join />
       <Services />
       <About />
       <Gallery />
-      <Join />
+      
       <Testimonials />
       <Contact />
       <Faq />

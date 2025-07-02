@@ -30,7 +30,7 @@ const Footer = () => {
               className=" bg-white rounded-full px-8 py-2 w-full"
             />
             <button className="bg-gradient-to-r from-text2 via-text to-text2 text-white w-2/3 text-xl font-semibold  px-8 py-2 rounded-full  ">
-              <div>Get in touch</div>
+              <div>Entrer en contact</div>
             </button>
           </div>
         </div>

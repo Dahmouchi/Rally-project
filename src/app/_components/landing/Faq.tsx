@@ -3,32 +3,32 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import React, { useState } from "react";
 const faqs = [
   {
-    question: "What types of hospitality businesses do you work with?",
+    question: "Qui sont Les Joueuses ?",
     answer:
-      "At RZ Hospitality, we work with a diverse range of hospitality businesses, including hotels, restaurants, bars, coffeeshops, and other hospitality establishments. We tailor our services to meet the unique needs of each client, ensuring optimal results and sustainable growth.",
+      "Les Joueuses est un équipage féminin composé de Nejdi Narjisse, experte en conformité et audit, et Farah Mahmoud Hussein, médecin gynécologue-obstétricienne. Elles participent ensemble au Rallye Aïcha des Gazelles 2026 pour porter un message de détermination, solidarité et dépassement de soi.",
   },
   {
-    question: "What services do you offer to improve hotel operations?",
+    question: "Qu'est-ce que le Rallye Aïcha des Gazelles ?",
     answer:
-      "We offer a comprehensive suite of services for hotels, including revenue management, operational efficiency optimization, guest experience enhancement, and staff training. Our goal is to streamline processes, boost profitability, and improve guest satisfaction.",
+      "Le Rallye Aïcha des Gazelles est un rallye 100% féminin créé en 1990. Il se déroule dans le désert marocain sans GPS, uniquement avec carte et boussole. Cet événement a une forte portée médiatique et un engagement environnemental certifié ISO 14001.",
   },
   {
-    question:
-      "How can your services help my restaurant increase profitability?",
+    question: "Quelle est la cause soutenue par Les Joueuses ?",
     answer:
-      "We focus on menu optimization, service improvement, and cost control strategies. By refining your menu design, improving kitchen and dining room operations, and implementing effective marketing, we help your restaurant increase efficiency and maximize revenue.",
+      "Les Joueuses participent pour soutenir les enfants nomades du désert marocain. Leur objectif est de mettre en lumière leurs défis quotidiens et d'améliorer leurs conditions de vie grâce à des actions concrètes et solidaires.",
   },
   {
-    question: "Do you assist with marketing and branding?",
+    question: "Pourquoi sponsoriser Les Joueuses ?",
     answer:
-      "Yes, we offer sales and marketing strategies to help increase visibility and attract new customers. This includes digital marketing, social media strategies, and brand positioning, all tailored to your specific target audience and goals.",
+      "Sponsoriser Les Joueuses, c’est associer votre marque à une aventure unique, engagée et humaine. Vous bénéficiez d’une visibilité forte à l’international, d’un projet à impact social et environnemental, et vous soutenez la promotion du sport féminin.",
   },
   {
-    question: "How do I get started working with RZ Hospitality?",
+    question: "Quels sont les avantages pour les sponsors ?",
     answer:
-      "Getting started is simple! Reach out to us via our contact page, and we'll arrange a consultation to understand your business needs. From there, we’ll craft a customized strategy that aligns with your vision and objectives.",
+      "Les sponsors profitent d’une visibilité sur le véhicule, les tenues officielles, les réseaux sociaux, et les événements liés au rallye. De plus, les dépenses de sponsoring sont déductibles fiscalement. Plusieurs formules sont proposées pour s’adapter à chaque partenaire.",
   },
 ];
+
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -49,7 +49,7 @@ const Faq = () => {
       <div className="grid grid-col-1 lg:grid-cols-2 py-8">
         <div className="flex flex-col justify-between ">
           <h1 className="lg:text-5xl text-2xl bg-gradient-to-r from-main3 to-gray-500 inline-block text-transparent bg-clip-text lg:w-2/3">
-            Answers to the frequently asked questions.
+            Réponses aux questions fréquemment posées.
           </h1>
           <div
            onClick={() => {
@@ -58,7 +58,7 @@ const Faq = () => {
               section.scrollIntoView({ behavior: "smooth" });
             }
           }} className="bg-gradient-to-r text-center cursor-pointer from-text2 text-white via-text to-text2 hidden lg:block text-xl my-8 lg:w-2/6 font-semibold  px-8 py-2 rounded-full ">
-            <div>Get in touch</div>
+            <div>Entrer en contact</div>
           </div>
         </div>
         <div className="space-y-4 mt-4">
@@ -83,7 +83,7 @@ const Faq = () => {
           ))}
         </div>
         <button className="bg-gradient-to-r from-text2 text-white via-text to-text2 lg:hidden text-xl my-8 lg:w-1/4 font-semibold  px-8 py-2 rounded-full ">
-            <div>Get in touch</div>
+            <div>Entrer en contact</div>
           </button>
       </div>
     </div>

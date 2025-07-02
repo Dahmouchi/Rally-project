@@ -56,23 +56,23 @@ const Home: NextPage = () => {
   return (
     <div id="Gallery">
       <main className="relative mx-auto lg:px-28 px-4 py-6 overscroll-none">
-        <div className="flex flex-col gap-4 mb-44">
+        <div className="flex flex-col gap-4 mb-24">
           <h1 className="lg:text-5xl text-3xl text-second">GALLERY</h1>
           <div className="h-[3px] w-32 bg-second"></div>
         </div>
-        {/*
+        
         {!showAll && (
           <div className="w-full lg:h-96 h-44 bg-gradient-to-b from-transparent to-white dark:to-dark absolute bottom-10 z-10"></div>
         )}
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-5">
           {buildPhotoBlocks(photos, showAll, isMobile)}
-        </div> */}
+        </div> 
         <div className="flex justify-center mt-4">
           <button
             onClick={toggleShowMore}
-            className="px-4 py-2 rounded-md underline z-10"
+            className="px-4 py-2 rounded-md underline z-10 uppercase"
           >
-            {showAll ? "SHOW LESS" : "SHOW MORE"}
+            {showAll ? "afficher moins" : "afficher plus"}
           </button>
         </div>
       </main>

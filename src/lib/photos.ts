@@ -1,7 +1,7 @@
 export const photos = [
   {
     id: 1,
-    src: "/images/img1.jpg",
+    src: "/Picture2.jpg",
     link: "",
     height: "70",
     heading: "View",
@@ -9,7 +9,7 @@ export const photos = [
   },
   {
     id: 2,
-    src: "/images/img4.jpg",
+    src: "/Picture3.png",
     link: "",
     height: "100",
     heading: "View",
@@ -17,7 +17,7 @@ export const photos = [
   },
   {
     id: 3,
-    src: "/images/img5.jpg",
+    src: "/Picture4.jpeg",
     link: "",
     height: "130",
     heading: "View",
@@ -25,15 +25,15 @@ export const photos = [
   },
   {
     id: 4,
-    src: "/images/img6.jpg",
+    src: "/Picture1.png",
     link: "",
-    height: "70",
+    height: "100",
     heading: "View",
     column: 2,
   },
   {
     id: 5,
-    src: "/images/img7.avif",
+    src: "/Picture5.png",
     link: "",
     height: "100",
     heading: "View",
@@ -41,7 +41,7 @@ export const photos = [
   },
   {
     id: 6,
-    src: "/images/img8.jpg",
+    src: "/Picture7.jpeg",
     link: "",
     height: "130",
     heading: "View",
@@ -49,7 +49,7 @@ export const photos = [
   },
   {
     id: 7,
-    src: "/images/img2.jpg",
+    src: "/Picture8.jpeg",
     link: "",
     height: "130",
     heading: "View",
@@ -57,7 +57,7 @@ export const photos = [
   },
   {
     id: 8,
-    src: "/images/img3.jpg",
+    src: "/Picture2.png",
     link: "",
     height: "100",
     heading: "View",
@@ -65,7 +65,7 @@ export const photos = [
   },
   {
     id: 9,
-    src: "/images/img9.jpg",
+    src: "/download.jpeg",
     link: "",
     height: "130",
     heading: "View",

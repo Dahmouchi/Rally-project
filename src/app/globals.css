@@ -143,7 +143,9 @@
   cursor: pointer;
   overflow: hidden;
 }
-
+section{
+  padding: 15px;
+}
 /* Svg styles */
 .switch .svg {
   transition: var(--transition);
