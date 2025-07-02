@@ -50,7 +50,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="formules" className="section-padding bg-white">
+    <section id="formules" className="section-padding bg-white dark:bg-dark">
         <div className="container-custom">
           <div className="text-center mb-12">
            <h1 className="lg:text-7xl text-3xl">FORMULES DE PARTENARIAT</h1>
@@ -67,7 +67,7 @@ const Testimonials = () => {
                 className={`rounded-lg overflow-hidden border ${
                   partnership.featured
                     ? "border-primary bg-secondary shadow-xl"
-                    : "border-gray-200 bg-white shadow-md"
+                    : "border-gray-200 bg-white dark:bg-dark shadow-md"
                 }`}
               >
                 <div className="grid grid-cols-1 md:grid-cols-4 items-center">
@@ -80,7 +80,7 @@ const Testimonials = () => {
                   >
                     <h3
                       className={`text-xl font-montserrat font-bold mb-2 ${
-                        partnership.featured ? "text-white" : "text-secondary"
+                        partnership.featured ? "text-white" : "text-secondary dark:text-white"
                       }`}
                     >
                       {partnership.title}
@@ -97,7 +97,7 @@ const Testimonials = () => {
                   <div className="p-6 md:col-span-2">
                     <ul className="space-y-2">
                       {partnership.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
+                        <li key={featureIndex} className="flex items-start ">
                           <div
                             className={`mr-2 mt-1 ${
                               partnership.featured
@@ -120,7 +120,7 @@ const Testimonials = () => {
                           </div>
                           <span
                             className={
-                              partnership.featured ? "text-white" : "text-dark"
+                              partnership.featured ? "text-white" : "text-dark dark:text-white"
                             }
                           >
                             {feature}
@@ -136,7 +136,7 @@ const Testimonials = () => {
                       className={`inline-block px-6 py-3 rounded-md font-montserrat font-bold transition-colors ${
                         partnership.featured
                           ? "bg-primary text-secondary hover:bg-opacity-90"
-                          : "bg-secondary text-white hover:bg-opacity-90"
+                          : "bg-secondary dark:bg-gray-300 dark:text-slate-600 text-white hover:bg-opacity-90"
                       }`}
                     >
                       Nous contacter

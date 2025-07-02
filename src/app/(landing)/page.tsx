@@ -8,6 +8,7 @@ import Testimonials from "../_components/landing/Testimonials";
 import Contact from "../_components/landing/Contact";
 import Faq from "../_components/landing/Faq";
 import Footer from "../_components/landing/Footer";
+import Veuccul from "../_components/landing/Veuccul";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Join />
       <Services />
       <About />
+      <Veuccul />
       <Gallery />
       
       <Testimonials />

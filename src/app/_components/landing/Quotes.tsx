@@ -29,24 +29,31 @@ const Quotes = () => {
               
             </h1>
            <div className="space-y-4">
-                <div className="bg-light dark:bg-dark rounded-lg p-4 border-l-4 border-gray-600">
-                  <p className="text-accent font-montserrat font-bold text-xl">
+                <div className="bg-light dark:bg-dark rounded-lg flex items-center gap-3 p-4 border-l-4 border-gray-600">
+                  <img src="/medaille-Photoroom.png" className="w-8 h-auto" alt="" />
+                  <div>
+                    <p className="text-accent font-montserrat font-bold text-xl">
                     2024
                   </p>
                   <p className="font-semibold">
                     1ère place au classement général pour Mme NEJDI Narjisse au
                     Nour Rallye Raid
                   </p>
+                  </div>
                 </div>
 
-                <div className="bg-light dark:bg-dark rounded-lg p-4 border-l-4 border-gray-600">
-                  <p className="text-accent font-montserrat font-bold text-xl">
+                <div className="bg-light dark:bg-dark rounded-lg p-4 flex items-center gap-3 border-l-4 border-gray-600">
+                                    <img src="/medaille-Photoroom.png" className="w-8 h-auto" alt="" />
+
+                 <div>
+                   <p className="text-accent font-montserrat font-bold text-xl">
                     2025
                   </p>
                   <p className="font-semibold">
                     1ère place au classement général au M-Automotiv NourRallye
                     (Edition à 3 étapes : RoadBook, OffRoad, Dunes)
                   </p>
+                 </div>
                 </div>
               </div>
             <h1 className="text-right lg:text-2xl text-xl text-slate-50">
