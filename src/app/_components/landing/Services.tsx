@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React from "react";
 
@@ -220,7 +219,7 @@ const engagements = [
             {engagements.map((item, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+                className="bg-white dark:bg-gray-900 rounded-lg p-6  border-primary border-2 shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="text-primary mb-4">{item.icon}</div>
                 <h3 className="text-xl font-montserrat font-bold text-secondary dark:text-gray-50 mb-2">
@@ -253,7 +252,7 @@ const engagements = [
             {benefits.map((item, index) => (
               <div
                 key={index}
-                className="text-center shadow-lg p-6 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 hover:border-primary transition-colors"
+                className="text-center shadow-lg p-6 rounded-lg border-primary border-2 bg-white dark:bg-gray-800  transition-colors"
               >
                 <div className="text-primary mb-4 flex justify-center">
                   {item.icon}

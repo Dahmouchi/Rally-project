@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 
@@ -8,33 +9,31 @@ const Footer = () => {
         <div className="w-full py-4 flex flex-col lg:items-start items-center gap-4 px-8 text-center justify-center">
           <div>
             <h1 className="lg:text-left text-center text-3xl lg:text-6xl text-white">
-              Unlock the Future of{" "}
+              Rejoignez l&apos;Aventure
             </h1>
             <h1 className="lg:text-left text-center text-3xl lg:text-6xl text-white">
-              Hospitality Excellence
+              avec Les Joueuses
             </h1>
           </div>
 
           <h1 className="text-slate-200 text-md font-light">
-            Join a community of hospitality leaders committed to excellence and
-            transformation.
+            Soutenez une aventure 100% féminine, solidaire et engagée.
           </h1>
           <h1 className="text-slate-200 text-md font-light ">
-            Subscribe today and let&apos;s shape the future of
-            hospitality together
+            Entrez en contact et devenez partenaire de notre défi dans le désert marocain.
           </h1>
           <div className=" grid lg:grid-cols-2 grid-cols-1  w-full place-items-center gap-4">
             <input
               type="text"
-              placeholder="Your e-mail..."
+              placeholder="Votre e-mail..."
               className=" bg-white rounded-full px-8 py-2 w-full"
             />
             <button className="bg-gradient-to-r from-text2 via-text to-text2 text-white w-2/3 text-xl font-semibold  px-8 py-2 rounded-full  ">
-              <div>Entrer en contact</div>
+              <div>Nous Contacter</div>
             </button>
           </div>
         </div>
-        <img src="/images/circle2.png" alt="" className="h-full w-auto" />
+        <img src="/circle.png" alt="" className="h-full w-auto" />
       </div>
       <div className="bg-gradient-to-t relative from-main2 to-main text-white lg:pt-16 lg:px-16 px-4 py-4 bg-cover lg:bg-end">
         <img
@@ -45,31 +44,31 @@ const Footer = () => {
 
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
           <div className="flex flex-col justify-center lg:items-start items-center">
-            <img src="/images/logo.png" alt="" className="w-1/2 h-auto" />
+            <img src="/Picture1.jpg" alt="Les Joueuses Logo" className="w-1/2 h-auto" />
           </div>
           <div className="flex flex-col gap-8 justify-center lg:items-start items-center">
             <div className="flex flex-row gap-8">
               <h1
                 className="text-white text-lg font-light cursor-pointer"
                 onClick={() => {
-                  const section = document.querySelector("#about-us");
+                  const section = document.querySelector("#equipage");
                   if (section) {
                     section.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >
-                About US
+                L&apos;Équipage
               </h1>
               <h1
                 className="text-white text-lg font-light cursor-pointer"
                 onClick={() => {
-                  const section = document.querySelector("#our-services");
+                  const section = document.querySelector("#rallye");
                   if (section) {
                     section.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >
-                Our Services
+                Le Rallye
               </h1>
               <h1
                 className="text-white text-lg font-light cursor-pointer"
@@ -87,29 +86,29 @@ const Footer = () => {
               <h1
                 className="text-white text-lg font-light cursor-pointer"
                 onClick={() => {
-                  const section = document.querySelector("#Gallery");
+                  const section = document.querySelector("#cause");
                   if (section) {
                     section.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >
-                gallery
+                Notre Cause
               </h1>
               <h1
                 className="text-white text-lg font-light cursor-pointer"
                 onClick={() => {
-                  const section = document.querySelector("#Testimonials");
+                  const section = document.querySelector("#sponsoring");
                   if (section) {
                     section.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >
-                Testimonials
+                Sponsoring
               </h1>
               <h1
                 className="text-white text-lg font-light cursor-pointer"
                 onClick={() => {
-                  const section = document.querySelector("#FAQ");
+                  const section = document.querySelector("#faq");
                   if (section) {
                     section.scrollIntoView({ behavior: "smooth" });
                   }
@@ -122,21 +121,21 @@ const Footer = () => {
           <div className="flex flex-col gap-2 justify-center lg:px-16 px-4">
             <div className="flex flex-row p-1 bg-white/15 gap-4 rounded-full items-center">
               <img src="/icons/facebook.png" alt="" className="w-16 h-16" />
-              <h1 className="text-white text-xl">Follow us on Facebook</h1>
+              <h1 className="text-white text-xl">Suivez-nous sur Facebook</h1>
             </div>
             <div className="flex flex-row p-1 bg-white/15 gap-4 rounded-full items-center">
               <img src="/icons/instagram.png" alt="" className="w-16 h-16" />
-              <h1 className="text-white text-xl">Follow us on Instagram</h1>
+              <h1 className="text-white text-xl">Suivez-nous sur Instagram</h1>
             </div>
             <div className="flex flex-row p-1 bg-white/15 gap-4 rounded-full items-center">
               <img src="/icons/linkedIn.png" alt="" className="w-16 h-16" />
-              <h1 className="text-white text-xl">Follow us on LinkedIn</h1>
+              <h1 className="text-white text-xl">Suivez-nous sur LinkedIn</h1>
             </div>
           </div>
         </div>
         <div className="w-full text-center mt-8">
           <h1 className="font-light">
-            © 2025 RZ Hospitality. All rights reserved.
+            © 2025 Les Joueuses Rallye Aïcha des Gazelles. Tous droits réservés.
           </h1>
         </div>
       </div>

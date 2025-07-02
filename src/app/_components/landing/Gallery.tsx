@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import PhotoBlock from "@/components/PhotoBlock";
@@ -76,6 +75,7 @@ const Home: NextPage = () => {
           </button>
         </div>
       </main>
+      
     </div>
   );
 };

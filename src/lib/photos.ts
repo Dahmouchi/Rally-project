@@ -17,7 +17,7 @@ export const photos = [
   },
   {
     id: 3,
-    src: "/Picture4.jpeg",
+    src: "/Aicha-Gazelle.jpg",
     link: "",
     height: "130",
     heading: "View",
@@ -41,7 +41,7 @@ export const photos = [
   },
   {
     id: 6,
-    src: "/Picture7.jpeg",
+    src: "/Picture4.png",
     link: "",
     height: "130",
     heading: "View",
@@ -49,7 +49,7 @@ export const photos = [
   },
   {
     id: 7,
-    src: "/Picture8.jpeg",
+    src: "/test1.jpg",
     link: "",
     height: "130",
     heading: "View",
@@ -65,7 +65,7 @@ export const photos = [
   },
   {
     id: 9,
-    src: "/download.jpeg",
+    src: "/test.jpg",
     link: "",
     height: "130",
     heading: "View",

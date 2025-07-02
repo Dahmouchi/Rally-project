@@ -24,35 +24,34 @@ const Join = () => {
           </div>
         </div>
       </div>
-      <div className=" w-full flex items-center lg:justify-start justify-center lg:p-0 p-2">
+      <div className=" w-full flex items-center lg:justify-start justify-center lg:p-0 lg:p-2">
         <div className="bg-gradient-to-r relative from-main2 via-main to-main2 w-full lg:w-3/4 lg:h-[400px] lg:rounded-r-full rounded-br-full rounded-bl-full  lg:rounded-bl-none lg:rounded-tr-full flex lg:flex-row flex-col">
           <div className="w-full py-4 flex flex-col lg:items-center items-center justify-center gap-8 lg:px-8 px-3">
             <div>
-              <p className="text-slate-200 text-lg ">
+              <p className="text-slate-200 text-lg text-center lg:text-right">
                 Le Rallye Aïcha des Gazelles est un événement 100% féminin créé
                 en 1990 :
               </p>
               <ul className="lg:ml-3 text-white font-semibold space-y-4 mt-4">
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2 lg:flex-row flex-col justify-center text-center lg:text-start">
                   <BadgeCheck className="w-6 h-6"/>
                   {" "}
                   Navigation dans le désert marocain sans GPS, uniquement carte
                   et boussole.{" "}
                 </li>
-                 <li className="flex items-center gap-2">
+                 <li className="flex items-center gap-2 lg:flex-row flex-col justify-center text-center lg:text-start">
                   <BadgeCheck className="w-6 h-6"/>
                   33 éditions, 160 équipages, 9 nationalités, couverture
                   médiatique internationale.
                 </li>
-                 <li className="flex items-center gap-2">
+                 <li className="flex items-center gap-2 lg:flex-row flex-col justify-center text-center lg:text-start">
                   <BadgeCheck className="w-6 h-6"/>
                   Événement certifié ISO 14001 pour son engagement
                   environnemental.
                 </li>
-                 <li className="flex items-center gap-2">
+                 <li className="flex items-center gap-2 lg:flex-row flex-col justify-center text-center lg:text-start">
                   <BadgeCheck className="w-6 h-6"/>
-                  Les Joueuses participent pour relever ce défi hors norme et
-                  partager une aventure humaine et solidaire.
+                  Les Joueuses relèvent un défi unique et partagent une aventure solidaire.
                 </li>
               </ul>
               

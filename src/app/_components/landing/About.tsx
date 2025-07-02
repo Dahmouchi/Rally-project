@@ -51,7 +51,7 @@ const About = () => {
                 key={index}
                 className="bg-secondary bg-opacity-50 backdrop-blur-sm p-6 rounded-lg border border-primary border-opacity-30 hover:border-opacity-100 transition-all"
               >
-                <div className="flex items-start">
+                <div className="flex items-start lg:flex-row flex-col gap-2">
                   <div className="bg-primary rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white font-montserrat font-bold">
                       {item.number}

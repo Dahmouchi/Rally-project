@@ -10,11 +10,11 @@ interface NavigationItem {
 }
 
 const links: NavigationItem[] = [
-  { name: "Our services", href: "#our-services" },
-  { name: "About US", href: "#about-us" },
-  { name: "Gallery", href: "#Gallery" },
-  { name: "Testimonials", href: "#Testimonials" },
-  { name: "FAQ", href: "#FAQ" },
+{ name: "Accueil", href: "#hero" },
+    { name: "L'Équipage", href: "#about-uss" },
+    { name: "Notre Cause", href: "#our-services" },
+    { name: "Gallery", href: "#Gallery" },
+    { name: "FAQ", href: "#FAQ" },
 ];
 
 const Data = () => {

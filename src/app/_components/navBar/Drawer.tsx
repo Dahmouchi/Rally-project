@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { ReactNode } from "react";
 import { X } from "lucide-react";
 import Link from "next/link";
@@ -37,7 +38,7 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
           <div className="flex items-center justify-center">
           <Link href="/"><img
               className="h-auto w-32"
-              src="/images/logo.png"
+              src="/Picture1.jpg"
               alt="Courses-Logo"
               onClick={() => {
                 setIsOpen(false);

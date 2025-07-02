@@ -18,7 +18,7 @@ const Quotes = () => {
           <div className="flex flex-col gap-4 lg:px-32 md:px-10">
             <h1 className="lg:text-5xl text-second text-4xl ">
 
-              <span className="bg-gradient-to-r from-white to-gray-500 inline-block text-transparent bg-clip-text mr-2">Welcome to </span><span className="bg-gradient-to-r from-gray-600 via-white to-gray-700 inline-block text-transparent bg-clip-text font-bold"> Les Joueuses</span>{" "}
+              <span className="bg-gradient-to-r from-[#7B4019] to-[#FFEEA9] inline-block text-transparent bg-clip-text mr-2">Welcome to </span><span className="bg-gradient-to-r from-[#7B4019] to-[#FFEEA9] via-[#7B4019]  inline-block text-transparent bg-clip-text font-bold"> Les Joueuses</span>{" "}
             </h1>
             <h1 className="text-slate-100 lg:text-xl text-md">
                 Notre équipe &quot;Les Joueuses&quot; est composée de deux

@@ -16,7 +16,6 @@ const NavBar = () => {
     { name: "L'Équipage", href: "#about-uss" },
     { name: "Notre Cause", href: "#our-services" },
     { name: "Gallery", href: "#Gallery" },
-    { name: "Testimonials", href: "#Testimonials" },
     { name: "FAQ", href: "#FAQ" },
   ];
 
