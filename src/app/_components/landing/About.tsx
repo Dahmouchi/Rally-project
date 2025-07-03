@@ -5,7 +5,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 const About = () => {
   // Refs for scroll animations
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
   const mainControls = useAnimation();
   
   // Animation variants

@@ -19,8 +19,7 @@ export default function Home() {
       <Services />
       <About />
       <Veuccul />
-      <Gallery />
-      
+      <Gallery />  
       <Testimonials />
       <Contact />
       <Faq />

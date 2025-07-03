@@ -6,7 +6,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 const Testimonials = () => {
   // Refs for scroll animations
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.1 });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
   const mainControls = useAnimation();
   
   // Animation variants

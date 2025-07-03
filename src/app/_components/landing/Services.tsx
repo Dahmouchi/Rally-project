@@ -6,8 +6,8 @@ const Services = () => {
   // Refs for scroll animations
   const engagementRef = useRef(null);
   const sponsorRef = useRef(null);
-  const isEngagementInView = useInView(engagementRef, { once: false, amount: 0.2 });
-  const isSponsorInView = useInView(sponsorRef, { once: false, amount: 0.2 });
+  const isEngagementInView = useInView(engagementRef, { once: true, amount: 0.2 });
+  const isSponsorInView = useInView(sponsorRef, { once: true, amount: 0.2 });
   const engagementControls = useAnimation();
   const sponsorControls = useAnimation();
   

@@ -8,8 +8,8 @@ const Veuccul = () => {
   // Refs for scroll animations
   const vehicleRef = useRef(null);
   const budgetRef = useRef(null);
-  const isVehicleInView = useInView(vehicleRef, { once: false, amount: 0.2 });
-  const isBudgetInView = useInView(budgetRef, { once: false, amount: 0.2 });
+  const isVehicleInView = useInView(vehicleRef, { once: true, amount: 0.2 });
+  const isBudgetInView = useInView(budgetRef, { once: true, amount: 0.2 });
   const vehicleControls = useAnimation();
   const budgetControls = useAnimation();
   
