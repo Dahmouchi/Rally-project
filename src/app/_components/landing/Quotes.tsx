@@ -148,16 +148,9 @@ const Quotes = () => {
               className="lg:text-5xl text-second text-4xl"
               variants={titleVariants}
             >
+             
               <motion.span 
-                className="bg-gradient-to-r from-[#7B4019] to-[#FFEEA9] inline-block text-transparent bg-clip-text mr-2"
-                initial={{ backgroundPosition: "0% 50%" }}
-                animate={{ backgroundPosition: "100% 50%" }}
-                transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
-              >
-                Welcome to 
-              </motion.span>
-              <motion.span 
-                className="bg-gradient-to-r from-[#7B4019] to-[#FFEEA9] via-[#7B4019] inline-block text-transparent bg-clip-text font-bold"
+                className="bg-gradient-to-r from-[#7B4019] to-[#7B4019] via-[#7B4019] inline-block text-transparent bg-clip-text font-bold"
                 initial={{ backgroundPosition: "0% 50%" }}
                 animate={{ backgroundPosition: "100% 50%" }}
                 transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", delay: 0.5 }}
@@ -170,7 +163,7 @@ const Quotes = () => {
               className="text-slate-100 lg:text-xl text-md"
               variants={textVariants}
             >
-              Notre équipe &quot;Les Joueuses&quot; est composée de deux
+              Notre équipe est composée de deux
               passionnées de rallye, unies par l&apos;amour de l&apos;aventure
               et l&apos;engagement social. Avec une solide expérience en
               compétition, nous relevons le défi du Rallye Aïcha des Gazelles

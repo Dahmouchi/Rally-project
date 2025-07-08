@@ -38,7 +38,7 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
           <div className="flex items-center justify-center">
           <Link href="/"><img
               className="h-auto w-32"
-              src="/logo.png"
+              src="/icons/LOGO2.png"
               alt="Courses-Logo"
               onClick={() => {
                 setIsOpen(false);

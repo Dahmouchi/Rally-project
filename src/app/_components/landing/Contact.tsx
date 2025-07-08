@@ -14,6 +14,52 @@ const Contact = () => {
     // Here you can send the data to your API
     setLoading(false);
   };
+   const partnerships = [
+    {
+      title: "Sponsor Exclusif",
+      price: "Prise en charge de tous les frais",
+      features: [
+        "Habillage exclusif du véhicule dans les couleurs du Sponsor",
+        "Vidéos sur les réseaux sociaux pour la promotion de la marque",
+        "Choix du nom de l'équipage sur une liste de proposition",
+        "Logo sur les tenues, réseaux sociaux, presse",
+        "Invitation à la soirée de remise des prix à Essaouira",
+      ],
+      featured: true,
+    },
+    {
+      title: "Sponsor Platine",
+      price: "100 000 DH et +",
+      features: [
+        "Logo véhicule, tenues, réseaux sociaux, presse",
+        "Présence dans nos vidéos et événements",
+      ],
+      featured: false,
+    },
+    {
+      title: "Sponsor Or",
+      price: "50 000 DH et +",
+      features: [
+        "Logo véhicule et réseaux sociaux",
+        "Logo sur nos gilets",
+        "Mention dans nos interviews",
+      ],
+      featured: false,
+    },
+    {
+      title: "Sponsor Argent",
+      price: "30 000 DH et +",
+      features: ["Visibilité réseaux sociaux", "Logo sur nos gilets"],
+      featured: false,
+    },
+    {
+      title: "Partenaire Ami",
+      price: "Contribution libre",
+      features: ["Nom de la marque cité dans notre communication"],
+      featured: false,
+    },
+  ];
+
   return (
     <div id="contact">
       <div className="relative lg:py-8 lg:min-h-screen p-2">
@@ -93,7 +139,27 @@ const Contact = () => {
                 className="w-full p-2 border border-gray-300 rounded-md"
               />
             </div>
-
+<div>
+  <label className="block font-medium text-gray-700 dark:text-gray-300">
+    Type de partenariat
+  </label>
+  <select
+    {...register("partnership", {
+      required: "Le partenariat est requis",
+    })}
+    className="w-full p-2 border border-gray-300 rounded-md"
+    defaultValue=""
+  >
+    <option value="" disabled>
+      Veuillez choisir un partenariat
+    </option>
+    {partnerships.map((p) => (
+      <option key={p.title} value={p.title}>
+        {p.title} — {p.price}
+      </option>
+    ))}
+  </select>
+</div>
             {/* Message */}
             <div className="md:col-span-2">
               <label className="block font-medium text-gray-700 dark:text-gray-300">

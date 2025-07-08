@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import NavBar from "./_components/navBar/page";
+import Link from "next/link";
 
 
 const figtree = Figtree({
@@ -26,8 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${figtree.variable} antialiased`}
+        className={`${figtree.variable} antialiased relative`}
       >
+         <Link href={"https://wa.me/212660112597?text=Hello%20there!"} className="w-16 z-50 h-16 cursor-pointer bottom-8 right-8 fixed" >
+        <img src="/icons/whatsapp.png" className="w-16 h-16" alt="" />
+        </Link >
         <ThemeProvider
             attribute="class"
             defaultTheme="system"

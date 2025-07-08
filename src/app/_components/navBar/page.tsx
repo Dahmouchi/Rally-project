@@ -21,15 +21,15 @@ const NavBar = () => {
 
   return (
     <nav className=" bg-white dark:bg-dark fixed w-full z-20 top-0 start-0 lg:py-4 ">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 lg:py-0 py-2 lg:pt-5">
+      <div className="max-w-screen-xl flex flex-wrap  items-center justify-between mx-auto px-4 lg:py-0 py-2 lg:pt-5">
         {/* Logo */}
         <Link
           href="/"
-          className="lg:absolute top-0 left-0 flex items-center  rtl:space-x-reverse lg:px-12 lg:py-7 lg:z-50 rounded-r-2xl lg:bg-white lg:dark:bg-dark"
+          className="lg:absolute top-0  left-0 flex items-center  rtl:space-x-reverse lg:px-12 lg:py-7 lg:z-50 rounded-br-2xl bg-white"
         >
           <img
-            src="/logo.png"
-            className="lg:w-44 w-24 h-auto"
+            src="/icons/LOGO2.png"
+            className="lg:w-44 w-28 h-auto"
             alt="RZ Logo"
           />
         </Link>

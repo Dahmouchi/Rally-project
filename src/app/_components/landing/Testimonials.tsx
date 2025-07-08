@@ -85,31 +85,6 @@ const Testimonials = () => {
     },
   };
   
-  const featureItemVariants = {
-    hidden: { opacity: 0, x: -10 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { 
-        duration: 0.4, 
-        ease: "easeOut" 
-      },
-    },
-  };
-  
-  const iconVariants = {
-    hidden: { opacity: 0, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { 
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
-        delay: 0.1
-      },
-    },
-  };
   
   const buttonVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -263,8 +238,7 @@ const Testimonials = () => {
                       <motion.li 
                         key={featureIndex} 
                         className="flex items-start"
-                        variants={featureItemVariants}
-                        whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                      
                       >
                         <motion.div
                           className={`mr-2 mt-1 ${
@@ -272,12 +246,8 @@ const Testimonials = () => {
                               ? "text-primary"
                               : "text-accent"
                           }`}
-                          variants={iconVariants}
-                          whileHover={{ 
-                            rotate: 360,
-                            scale: 1.2,
-                            transition: { duration: 0.5 }
-                          }}
+                          
+                         
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"

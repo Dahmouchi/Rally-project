@@ -193,11 +193,7 @@ const About = () => {
                 <motion.div 
                   className="bg-primary rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0"
                   variants={numberVariants}
-                  whileHover={{ 
-                    scale: 1.1,
-                    rotate: [0, -5, 5, -5, 0],
-                    transition: { duration: 0.5 }
-                  }}
+                
                 >
                   <span className="text-white font-montserrat font-bold">
                     {item.number}

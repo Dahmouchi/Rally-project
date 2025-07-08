@@ -44,7 +44,7 @@ const Footer = () => {
 
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
           <div className="flex flex-col justify-center lg:items-start items-center ">
-            <div className="bg-white p-3 rounded-lg w-1/2"><img src="/logo.png" alt="Les Joueuses Logo" className="w-full h-auto" /></div>
+            <div className="bg-white p-3 rounded-lg w-1/2"><img src="/icons/LOGO2.png" alt="Les Joueuses Logo" className="w-full h-auto" /></div>
           </div>
           <div className="flex flex-col gap-8 justify-center lg:items-start items-center">
             <div className="flex flex-row gap-8">

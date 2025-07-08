@@ -348,12 +348,7 @@ const Services = () => {
                 key={index}
                 className="bg-white dark:bg-gray-900 rounded-lg p-6 border-primary border-2 shadow-md hover:shadow-lg transition-all"
                 variants={cardVariants}
-                whileHover={{ 
-                  y: -10, 
-                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-                  borderColor: "#FCBA03",
-                  transition: { duration: 0.2 }
-                }}
+               
               >
                <motion.div 
                   className="text-primary mb-4 flex justify-center"

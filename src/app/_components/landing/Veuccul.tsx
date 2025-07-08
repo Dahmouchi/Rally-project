@@ -309,15 +309,10 @@ const Veuccul = () => {
                 <motion.li 
                   className="flex items-start"
                   variants={listItemVariants}
-                  whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
                   <motion.div 
                     className="text-accent mr-3 mt-1"
-                    whileHover={{ 
-                      rotate: 360,
-                      scale: 1.2,
-                      transition: { duration: 0.5 }
-                    }}
+                  
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -339,15 +334,10 @@ const Veuccul = () => {
                 <motion.li 
                   className="flex items-start"
                   variants={listItemVariants}
-                  whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
                   <motion.div 
                     className="text-accent mr-3 mt-1"
-                    whileHover={{ 
-                      rotate: 360,
-                      scale: 1.2,
-                      transition: { duration: 0.5 }
-                    }}
+                   
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -369,15 +359,10 @@ const Veuccul = () => {
                 <motion.li 
                   className="flex items-start"
                   variants={listItemVariants}
-                  whileHover={{ x: 5, transition: { duration: 0.2 } }}
                 >
                   <motion.div 
                     className="text-accent mr-3 mt-1"
-                    whileHover={{ 
-                      rotate: 360,
-                      scale: 1.2,
-                      transition: { duration: 0.5 }
-                    }}
+                   
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

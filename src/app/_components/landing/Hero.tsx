@@ -102,10 +102,89 @@ export function Hero() {
 
     return <span className={className}>{count}+</span>;
   };
+  // Données des statistiques
+  const statsData = [
+    {
+      icon: Medal,
+      value: 33,
+      suffix: "+",
+      label: "éditions",
+      description: "Années d'expérience",
+      color: "from-yellow-400 to-orange-500",
+      bgColor: "bg-yellow-50",
+      iconColor: "text-yellow-600",
+    },
+    {
+      icon: Globe,
+      value: 9,
+      suffix: "+",
+      label: "nationalités",
+      description: "Représentées",
+      color: "from-blue-400 to-cyan-500",
+      bgColor: "bg-blue-50",
+      iconColor: "text-blue-600",
+    },
+    {
+      icon: Users,
+      value: 160,
+      suffix: "+",
+      label: "équipages",
+      description: "Participants actifs",
+      color: "from-green-400 to-emerald-500",
+      bgColor: "bg-green-50",
+      iconColor: "text-green-600",
+    },
+  ];
 
+  const cardVariants = {
+    hidden: {
+      y: 50,
+      opacity: 0,
+      scale: 0.9,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+        duration: 0.6,
+      },
+    },
+  };
+
+  const iconVariants = {
+    hidden: { scale: 0, rotate: -180 },
+    visible: {
+      scale: 1,
+      rotate: 0,
+      transition: {
+        type: "spring",
+        stiffness: 200,
+        damping: 20,
+        delay: 0.3,
+      },
+    },
+  };
+
+  const numberVariants = {
+    hidden: { scale: 0.5, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 150,
+        damping: 15,
+        delay: 0.5,
+      },
+    },
+  };
   return (
     <motion.div
-      className="w-full lg:min-h-screen lg:pt-24 pt-20"
+      className="w-full lg:min-h-screen lg:pt-24 pt-24"
       id="hero"
       initial="hidden"
       animate="visible"
@@ -113,9 +192,9 @@ export function Hero() {
     >
       <div className="lg:p-8 p-2">
         <motion.div
-          className="bg-red-800 relative w-full bg-cover bg-center rounded-2xl lg:min-h-[80vh] py-10 flex items-center justify-center overflow-hidden"
+          className="bg-red-800 relative w-full bg-cover bg-center rounded-2xl lg:min-h-[80vh] min-h-[45vh] py-10 flex items-center justify-center overflow-hidden"
           style={{
-            backgroundImage: 'url("/Picture2.jpg")',
+            backgroundImage: 'url("/test.jpg")',
           }}
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{
@@ -143,9 +222,8 @@ export function Hero() {
             >
               LES JOUEUSES
             </motion.h1>
-
             <motion.h1
-              className="lg:text-lg text-sm text-center text-slate-200 mt-2"
+              className="lg:text-lg text-sm text-center text-white rounded-md p-2 mt-2"
               variants={itemVariants}
             >
               Rejoignez-nous dans cette aventure unique au cœur du désert
@@ -289,75 +367,94 @@ export function Hero() {
         <div id="about-uss"></div>
 
         <motion.div
-          className="lg:hidden py-4"
-          variants={statsContainerVariants}
+          className="lg:hidden py-8 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+          variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
         >
-          <div className="flex items-center justify-center w-full gap-4 h-full ">
-            <div className="w-full px-4  h-full flex flex-col gap-8 items-center justify-between py-4 ">
-              <motion.div
-                className="flex flex-col border-2 border-main py-2 shadow-md w-full rounded-lg items-center justify-center"
-                variants={statsItemVariants}
-              >
-                <Medal
-                  className="w-20 h-auto text-text2"
-                 
-                />
-                <motion.h1
-                  className="text-text2 text-3xl font-bold"
-                  variants={numberAnimation}
-                >
-                  <Counter
-                    from={0}
-                    to={33}
-                    duration={2}
-                    className="text-text2 text-3xl font-bold"
-                  />
-                </motion.h1>
-                <h1 className="text-lg font-semibold"> éditions </h1>
-              </motion.div>
+          {/* Éléments décoratifs de fond */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-20 blur-xl"></div>
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-full opacity-20 blur-xl"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-green-200 to-blue-200 rounded-full opacity-10 blur-2xl"></div>
+          </div>
 
-              <motion.div
-                className="flex flex-col border-2 border-main py-2 shadow-md w-full rounded-lg items-center justify-center"
-                variants={statsItemVariants}
-              >
-                <Globe className="w-20 h-auto text-text2"/>
-                <motion.h1
-                  className="text-text2 text-6xl font-bold"
-                  variants={numberAnimation}
-                >
-                  <Counter
-                    from={0}
-                    to={9}
-                    duration={2}
-                    className="text-text2 text-3xl font-bold"
-                  />
-                </motion.h1>
-                <h1 className="text-lg font-semibold">
-                  nationalités représentées
-                </h1>
-              </motion.div>
+          {/* Titre de section */}
+          <motion.div
+            className="text-center mb-8 relative z-10"
+            initial={{ y: -30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+              Nos Réalisations
+            </h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+          </motion.div>
 
+          {/* Grille des statistiques */}
+          <div className="space-y-4 relative z-10">
+            {statsData.map((stat, index) => (
               <motion.div
-                className="flex flex-col border-2 border-main py-2 shadow-md w-full rounded-lg items-center justify-center"
-                variants={statsItemVariants}
+                key={index}
+                className="relative group"
+                variants={cardVariants}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <Users className="w-20 h-auto text-text2"/>
-                <motion.h1
-                  className="text-text2 text-3xl font-bold"
-                  variants={numberAnimation}
-                >
-                  <Counter
-                    from={0}
-                    to={160}
-                    duration={2}
-                    className="text-text2 text-3xl font-bold"
-                  />
-                </motion.h1>
-                <h1 className="text-lg font-semibold">équipages</h1>
+                {/* Carte principale */}
+                <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden relative">
+                  {/* Gradient de fond */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r ${stat.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}
+                  ></div>
+
+                  {/* Contenu */}
+                  <div className="relative p-6 flex items-center space-x-4 bg-gradient-to-r from-text2 via-text to-text2 text-white">
+                    {/* Icône */}
+                    <motion.div
+                      className={`${stat.bgColor} p-4 rounded-2xl shadow-sm`}
+                      variants={iconVariants}
+                    >
+                      <stat.icon className={`w-8 h-8 ${stat.iconColor}`} />
+                    </motion.div>
+
+                    {/* Contenu textuel */}
+                    <div className="flex-1">
+                      <motion.div
+                        className="flex items-baseline space-x-1 mb-1"
+                        variants={numberVariants}
+                      >
+                        <Counter
+                          from={0}
+                          to={stat.value}
+                          duration={2}
+                          suffix={stat.suffix}
+                          className="text-3xl font-bold text-white"
+                        />
+                      </motion.div>
+                      <h3 className="text-lg font-semibold text-white capitalize">
+                        {stat.label}
+                      </h3>
+                    </div>
+
+                    {/* Indicateur de progression */}
+                    <motion.div
+                      className="w-1 h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent rounded-full"
+                      initial={{ scaleY: 0 }}
+                      whileInView={{ scaleY: 1 }}
+                      transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+                      viewport={{ once: true }}
+                    ></motion.div>
+                  </div>
+
+                  {/* Effet de brillance au survol */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-700"></div>
+                </div>
               </motion.div>
-            </div>
+            ))}
           </div>
         </motion.div>
       </div>
