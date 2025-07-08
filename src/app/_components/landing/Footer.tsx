@@ -92,7 +92,7 @@ const Footer = () => {
                   }
                 }}
               >
-                Notre Cause
+                Le But
               </h1>
               <h1
                 className="text-white text-lg font-light cursor-pointer"

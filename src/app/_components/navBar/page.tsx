@@ -14,8 +14,8 @@ const NavBar = () => {
   const navLinks = [
     { name: "Accueil", href: "#hero" },
     { name: "L'Équipage", href: "#about-uss" },
-    { name: "Notre Cause", href: "#our-services" },
-    { name: "Gallery", href: "#Gallery" },
+    { name: "Le But", href: "#our-services" },
+    { name: "Galerie", href: "#Gallery" },
     { name: "FAQ", href: "#FAQ" },
   ];
 
@@ -48,7 +48,7 @@ const NavBar = () => {
               }
             }}
             className="before:ease hidden lg:block p-2 px-6 text-main dark:text-white dark:border-slate-200 rounded-full relative  overflow-hidden border-2 bg-white dark:bg-dark border-main shadow-2xl before:absolute before:left-0 before:-ml-2 before:h-48 before:w-48 before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-main before:transition-all before:duration-300 hover:text-white hover:shadow-main2 hover:before:-rotate-180">
-              <p className=" relative z-10 text-lg"> Contact Us</p>
+              <p className=" relative z-10 text-lg"> Contactez-Nous</p>
             </button>
           </div>
           <button

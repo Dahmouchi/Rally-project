@@ -247,7 +247,7 @@ export function Hero() {
                 whileHover="hover"
                 whileTap="tap"
               >
-                <div className="bg-gradient-to-r font-semibold from-text2 via-text to-text2 px-4 py-2 rounded-full text-slate-100 relative overflow-hidden group">
+                <div className="bg-gradient-to-r font-semibold from-text2 via-text to-text2 px-4 py-2 rounded-full text-center text-slate-100 relative overflow-hidden group">
                   <motion.span
                     className="absolute inset-0 bg-white/20 translate-y-full"
                     initial={{ translateY: "100%" }}
@@ -267,7 +267,7 @@ export function Hero() {
                     section.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="border-2 cursor-pointer text-white font-semibold px-6 py-2 rounded-full border-white relative overflow-hidden group"
+                className="border-2 cursor-pointer text-white font-semibold text-center px-6 py-2 rounded-full border-white relative overflow-hidden group"
                 variants={buttonVariants}
                 whileHover="hover"
                 whileTap="tap"
