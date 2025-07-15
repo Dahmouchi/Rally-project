@@ -13,8 +13,8 @@ const NavBar = () => {
   // Define the navigation links
   const navLinks = [
     { name: "Accueil", href: "#hero" },
-    { name: "L'Équipage", href: "#about-uss" },
-    { name: "Le But", href: "#our-services" },
+    { name: "Qui sommes-nous", href: "#about-uss" },
+    { name: "Notre vision", href: "#our-services" },
     { name: "Galerie", href: "#Gallery" },
     { name: "FAQ", href: "#FAQ" },
   ];

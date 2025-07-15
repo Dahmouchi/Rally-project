@@ -14,7 +14,7 @@ const Contact = () => {
     // Here you can send the data to your API
     setLoading(false);
   };
-   const partnerships = [
+  const partnerships = [
     {
       title: "Sponsor Exclusif",
       price: "Prise en charge de tous les frais",
@@ -58,6 +58,12 @@ const Contact = () => {
       features: ["Nom de la marque cité dans notre communication"],
       featured: false,
     },
+    {
+      title: "Autre",
+      price: "",
+      features: ["Nom de la marque cité dans notre communication"],
+      featured: false,
+    },
   ];
 
   return (
@@ -73,11 +79,6 @@ const Contact = () => {
           <h2 className="text-yellow-500 lg:text-4xl text-2xl font-semibold">
             Contacez-Nous
           </h2>
-          <p className="text-gray-600 dark:text-gray-200 text-sm mt-2 font-light">
-            Nous serions ravis de vous entendre ! Que vous souhaitez en savoir
-            plus sur nous ou que vous souhaitiez faire passer votre entreprise
-            au niveau supérieur, notre équipe est là pour vous aider.{" "}
-          </p>
 
           <form
             onSubmit={handleSubmit(onSubmit)}
@@ -139,27 +140,27 @@ const Contact = () => {
                 className="w-full p-2 border border-gray-300 rounded-md"
               />
             </div>
-<div>
-  <label className="block font-medium text-gray-700 dark:text-gray-300">
-    Type de partenariat
-  </label>
-  <select
-    {...register("partnership", {
-      required: "Le partenariat est requis",
-    })}
-    className="w-full p-2 border border-gray-300 rounded-md"
-    defaultValue=""
-  >
-    <option value="" disabled>
-      Veuillez choisir un partenariat
-    </option>
-    {partnerships.map((p) => (
-      <option key={p.title} value={p.title}>
-        {p.title} — {p.price}
-      </option>
-    ))}
-  </select>
-</div>
+            <div>
+              <label className="block font-medium text-gray-700 dark:text-gray-300">
+                Type de partenariat
+              </label>
+              <select
+                {...register("partnership", {
+                  required: "Le partenariat est requis",
+                })}
+                className="w-full p-2 border border-gray-300 rounded-md"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Veuillez choisir un partenariat
+                </option>
+                {partnerships.map((p) => (
+                  <option key={p.title} value={p.title}>
+                    {p.title} {p.price}
+                  </option>
+                ))}
+              </select>
+            </div>
             {/* Message */}
             <div className="md:col-span-2">
               <label className="block font-medium text-gray-700 dark:text-gray-300">

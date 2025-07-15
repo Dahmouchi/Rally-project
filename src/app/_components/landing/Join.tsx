@@ -142,6 +142,7 @@ const Join = () => {
           variants={cardVariants}
         >
           <div className="w-full flex flex-col lg:items-center items-center justify-center gap-8 lg:px-8 px-3 py-4">
+            <div className="w-full text-white font-semibold text-3xl"><h1>Se lancer dans le Rallye Aicha des Gazelles du Maroc est un challenge mais aussi un engagement. </h1></div>
             <motion.div className="space-y-4" variants={containerVariants}>
               <motion.div
                 className="bg-light dark:bg-dark rounded-lg flex items-center gap-3 p-4 border-l-4 border-gray-600"

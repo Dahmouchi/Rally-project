@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
@@ -190,11 +191,11 @@ export function Hero() {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="lg:p-8 p-2">
+      <div className="lg:p-x p-2">
         <motion.div
-          className="bg-red-800 relative w-full bg-cover bg-center rounded-2xl lg:min-h-[80vh] min-h-[45vh] py-10 flex items-center justify-center overflow-hidden"
+          className="bg-red-800 hidden lg:flex relative w-full bg-cover bg-center rounded-2xl lg:min-h-[80vh] min-h-[45vh] py-10  items-center justify-center overflow-hidden"
           style={{
-            backgroundImage: 'url("/test.jpg")',
+            backgroundImage: 'url("/hero.png")',
           }}
           initial={{ opacity: 0, scale: 1.05 }}
           animate={{
@@ -203,89 +204,7 @@ export function Hero() {
             transition: { duration: 1.2 },
           }}
         >
-          <motion.div
-            className="bg-yellow-800/40 absolute w-full h-full rounded-2xl"
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: { duration: 1.5, delay: 0.3 },
-            }}
-          ></motion.div>
-
-          <motion.div
-            className="lg:w-1/2 z-10 px-4"
-            variants={containerVariants}
-          >
-            <motion.h1
-              className="lg:text-7xl font-semibold text-4xl text-center text-white"
-              variants={itemVariants}
-            >
-              LES JOUEUSES
-            </motion.h1>
-            <motion.h1
-              className="lg:text-lg text-sm text-center text-white rounded-md p-2 mt-2"
-              variants={itemVariants}
-            >
-              Rejoignez-nous dans cette aventure unique au cœur du désert
-              marocain. Un défi sportif, humain et solidaire qui porte haut les
-              valeurs d&apos;engagement et de détermination.
-            </motion.h1>
-
-            <motion.div
-              className="flex gap-2 items-center justify-center mt-2"
-              variants={containerVariants}
-            >
-              <motion.div
-                className="cursor-pointer"
-                onClick={() => {
-                  const section = document.querySelector("#our-services");
-                  if (section) {
-                    section.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-                variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
-              >
-                <div className="bg-gradient-to-r font-semibold from-text2 via-text to-text2 px-4 py-2 rounded-full text-center text-slate-100 relative overflow-hidden group">
-                  <motion.span
-                    className="absolute inset-0 bg-white/20 translate-y-full"
-                    initial={{ translateY: "100%" }}
-                    whileHover={{
-                      translateY: "0%",
-                      transition: { duration: 0.3 },
-                    }}
-                  />
-                  <div className="relative z-10">EN SAVOIR PLUS</div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                onClick={() => {
-                  const section = document.querySelector("#contact");
-                  if (section) {
-                    section.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-                className="border-2 cursor-pointer text-white font-semibold text-center px-6 py-2 rounded-full border-white relative overflow-hidden group"
-                variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
-              >
-                <motion.span
-                  className="absolute inset-0 bg-white/20 translate-y-full"
-                  initial={{ translateY: "100%" }}
-                  whileHover={{
-                    translateY: "0%",
-                    transition: { duration: 0.3 },
-                  }}
-                />
-                <div className="relative z-10">Entrer en contact</div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
+          {/*<motion.div
             className="w-2/3 h-20 bg-white hidden lg:block absolute bottom-0 right-0 dark:bg-dark rounded-tl-full clip-path-custom"
             initial={{ x: "100%" }}
             animate={{
@@ -361,102 +280,94 @@ export function Hero() {
                 </motion.div>
               </div>
             </motion.div>
-          </motion.div>
+          </motion.div>*/}
         </motion.div>
-
-        <div id="about-uss"></div>
-
-        <motion.div
-          className="lg:hidden py-8 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+         <motion.div
+          className="bg-red-800 lg:hidden relative w-full bg-cover bg-top rounded-2xl lg:min-h-[100vh] min-h-[45vh] py-10 flex items-center justify-center overflow-hidden"
+          style={{
+            backgroundImage: 'url("/hero2.png")',
+          }}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            transition: { duration: 1.2 },
+          }}
         >
-          {/* Éléments décoratifs de fond */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-20 blur-xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-full opacity-20 blur-xl"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-br from-green-200 to-blue-200 rounded-full opacity-10 blur-2xl"></div>
-          </div>
-
-          {/* Titre de section */}
+         
+        </motion.div>
+        <div className="w-full flex items-center justify-center py-4 lg:py-8">
           <motion.div
-            className="text-center mb-8 relative z-10"
-            initial={{ y: -30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            className="lg:w-1/2 z-10 px-4"
+            variants={containerVariants}
           >
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">
-              Nos Réalisations
-            </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
-          </motion.div>
+           
+            <motion.h1
+              className="lg:text-lg text-sm text-slate-700 dark:text-white rounded-md p-2 mt-2 text-center"
+              variants={itemVariants}
+            >
+              Rejoignez-nous dans cette aventure unique au cœur du désert
+              marocain. Un défi sportif, humain et solidaire qui porte haut les
+              valeurs d&apos;engagement et de détermination.
+            </motion.h1>
 
-          {/* Grille des statistiques */}
-          <div className="space-y-4 relative z-10">
-            {statsData.map((stat, index) => (
+            <motion.div
+              className="flex gap-2 items-center justify-center mt-2"
+              variants={containerVariants}
+            >
               <motion.div
-                key={index}
-                className="relative group"
-                variants={cardVariants}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="cursor-pointer"
+                onClick={() => {
+                  const section = document.querySelector("#our-services");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="tap"
               >
-                {/* Carte principale */}
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden relative">
-                  {/* Gradient de fond */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-r ${stat.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}
-                  ></div>
-
-                  {/* Contenu */}
-                  <div className="relative p-6 flex items-center space-x-4 bg-gradient-to-r from-text2 via-text to-text2 text-white">
-                    {/* Icône */}
-                    <motion.div
-                      className={`${stat.bgColor} p-4 rounded-2xl shadow-sm`}
-                      variants={iconVariants}
-                    >
-                      <stat.icon className={`w-8 h-8 ${stat.iconColor}`} />
-                    </motion.div>
-
-                    {/* Contenu textuel */}
-                    <div className="flex-1">
-                      <motion.div
-                        className="flex items-baseline space-x-1 mb-1"
-                        variants={numberVariants}
-                      >
-                        <Counter
-                          from={0}
-                          to={stat.value}
-                          duration={2}
-                          suffix={stat.suffix}
-                          className="text-3xl font-bold text-white"
-                        />
-                      </motion.div>
-                      <h3 className="text-lg font-semibold text-white capitalize">
-                        {stat.label}
-                      </h3>
-                    </div>
-
-                    {/* Indicateur de progression */}
-                    <motion.div
-                      className="w-1 h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent rounded-full"
-                      initial={{ scaleY: 0 }}
-                      whileInView={{ scaleY: 1 }}
-                      transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
-                      viewport={{ once: true }}
-                    ></motion.div>
-                  </div>
-
-                  {/* Effet de brillance au survol */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-700"></div>
+                <div className="bg-gradient-to-r font-semibold from-text2 via-text to-text2 px-4 py-2 rounded-full text-center text-slate-100 relative overflow-hidden group">
+                  <motion.span
+                    className="absolute inset-0 bg-white/20 translate-y-full"
+                    initial={{ translateY: "100%" }}
+                    whileHover={{
+                      translateY: "0%",
+                      transition: { duration: 0.3 },
+                    }}
+                  />
+                  <div className="relative z-10">EN SAVOIR PLUS</div>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
+              <motion.div
+                onClick={() => {
+                  const section = document.querySelector("#contact");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="border-2 cursor-pointer text-slate-700 dark:text-gray-50 dark:border-white font-semibold text-center px-6 py-2 rounded-full border-slate-700 relative overflow-hidden group"
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="tap"
+              >
+                <motion.span
+                  className="absolute inset-0 bg-white/20 translate-y-full"
+                  initial={{ translateY: "100%" }}
+                  whileHover={{
+                    translateY: "0%",
+                    transition: { duration: 0.3 },
+                  }}
+                />
+                <div className="relative z-10">Entrer en contact</div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </div>
+        <div id="about-uss"></div>
+
+       
       </div>
     </motion.div>
   );

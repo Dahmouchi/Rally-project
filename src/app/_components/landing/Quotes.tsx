@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client"
 import React, { useEffect, useRef } from "react";
@@ -117,7 +118,7 @@ const Quotes = () => {
   }, [isInView, mainControls]);
 
   return (
-    <div className="lg:py-8 lg:px-8 py-4 px-4" ref={containerRef}>
+    <div className="lg:py-4 lg:px-8 py-0 px-4" ref={containerRef}>
       <motion.div
         className="bg-gradient-to-r relative from-main2 via-main to-main2 lg:rounded-3xl rounded-xl lg:py-8 lg:px-8 px-4 py-4 bg-cover lg:bg-center"
         initial="hidden"
@@ -133,7 +134,7 @@ const Quotes = () => {
         
         <div className="flex lg:flex-row flex-col gap-4 items-center">
           <motion.img
-            src="/Picture3.png"
+            src="/Picture33.jpg"
             alt=""
             className="lg:w-1/3 md:w-1/2 h-auto rounded-xl"
             variants={imageVariants}
@@ -155,7 +156,7 @@ const Quotes = () => {
                 animate={{ backgroundPosition: "100% 50%" }}
                 transition={{ duration: 3, repeat: Infinity, repeatType: "reverse", delay: 0.5 }}
               >
-                Les Joueuses
+                Notre Palmarès
               </motion.span>
             </motion.h1>
             
@@ -163,11 +164,7 @@ const Quotes = () => {
               className="text-slate-100 lg:text-xl text-md"
               variants={textVariants}
             >
-              Notre équipe est composée de deux
-              passionnées de rallye, unies par l&apos;amour de l&apos;aventure
-              et l&apos;engagement social. Avec une solide expérience en
-              compétition, nous relevons le défi du Rallye Aïcha des Gazelles
-              2026.
+              Notre binôme est composé de deux passionnées du monde du rallye, unies par l&apos;amour de l&apos;aventure et de l&apos;engagement social avec une solide expérience en compétition dans différents sports. Nous relevons ensemble le défi du Rallye Aicha des Gazelles 2026.
             </motion.h1>
             
             <motion.div 
@@ -235,12 +232,7 @@ const Quotes = () => {
               </motion.div>
             </motion.div>
             
-            <motion.h1 
-              className="text-right lg:text-2xl text-xl text-slate-50"
-              variants={signatureVariants}
-            >
-              - Nejdi Narjisse et Farah Hussein
-            </motion.h1>
+           
           </motion.div>
         </div>
       </motion.div>

@@ -9,11 +9,13 @@ import Contact from "../_components/landing/Contact";
 import Faq from "../_components/landing/Faq";
 import Footer from "../_components/landing/Footer";
 import Veuccul from "../_components/landing/Veuccul";
+import AboutUsSection from "../_components/landing/AboutUsSection ";
 
 export default function Home() {
   return (
     <div>
       <Hero />
+      <AboutUsSection />
       <Quotes />
       <Join />
       <Services />
