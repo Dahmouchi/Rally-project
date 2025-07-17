@@ -7,6 +7,14 @@ export const photos = [
     heading: "View",
     column: 1,
   },
+    {
+    id: 9,
+    src: "/img2.jpg",
+    link: "",
+    height: "130",
+    heading: "View",
+    column: 3,
+  },
   {
     id: 2,
     src: "/Picture3.png",
@@ -17,7 +25,7 @@ export const photos = [
   },
   {
     id: 3,
-    src: "/Aicha-Gazelle.jpg",
+    src: "/img1.jpg",
     link: "",
     height: "130",
     heading: "View",
@@ -47,14 +55,7 @@ export const photos = [
     heading: "View",
     column: 2,
   },
-  {
-    id: 7,
-    src: "/test1.jpg",
-    link: "",
-    height: "130",
-    heading: "View",
-    column: 3,
-  },
+
   {
     id: 8,
     src: "/Picture2.png",
@@ -63,13 +64,6 @@ export const photos = [
     heading: "View",
     column: 3,
   },
-  {
-    id: 9,
-    src: "/test.jpg",
-    link: "",
-    height: "130",
-    heading: "View",
-    column: 3,
-  },
+
  
 ];

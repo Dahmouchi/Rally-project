@@ -77,7 +77,7 @@ const Contact = () => {
         </div>
         <div className="bg-white lg:border-4 border-2 border-second rounded-lg dark:bg-dark lg:p-8 p-4 lg:w-2/3 lg:absolute right-16 top-32">
           <h2 className="text-yellow-500 lg:text-4xl text-2xl font-semibold">
-            Contacez-Nous
+            Contactez-nous
           </h2>
 
           <form

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -118,19 +119,20 @@ const Footer = () => {
               </h1>
             </div>
           </div>
-          <div className="flex flex-col gap-2 justify-center lg:px-16 px-4">
-            <div className="flex flex-row p-1 bg-white/15 gap-4 rounded-full items-center">
+          <div className="flex flex-col gap-2 justify-center lg:px-16 px-4 z-50">
+            {/*<div className="flex flex-row p-1 bg-white/15 gap-4 rounded-full items-center">
               <img src="/icons/facebook.png" alt="" className="w-16 h-16" />
               <h1 className="text-white text-xl">Suivez-nous sur Facebook</h1>
-            </div>
-            <div className="flex flex-row p-1 bg-white/15 gap-4 rounded-full items-center">
+            </div>*/}
+            
+            <Link href="https://www.instagram.com/lesjoueusesrallye" target="_blank" className="flex flex-row p-1 cursor-pointer bg-white/15 gap-4 rounded-full items-center">
               <img src="/icons/instagram.png" alt="" className="w-16 h-16" />
               <h1 className="text-white text-xl">Suivez-nous sur Instagram</h1>
-            </div>
-            <div className="flex flex-row p-1 bg-white/15 gap-4 rounded-full items-center">
+            </Link>
+            <Link href="https://www.linkedin.com/company/les-joueuses-aicha-des-gazelles-2026/" target="_blank" className="flex flex-row p-1 cursor-pointer bg-white/15 gap-4 rounded-full items-center">
               <img src="/icons/linkedIn.png" alt="" className="w-16 h-16" />
               <h1 className="text-white text-xl">Suivez-nous sur LinkedIn</h1>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="w-full text-center mt-8">

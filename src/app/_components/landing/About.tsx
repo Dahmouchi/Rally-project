@@ -108,7 +108,9 @@ const About = () => {
       title: "LA COUVERTURE MÉDIA DE NOTRE ÉQUIPAGE",
       description:
         "Bénéficiez d'une visibilité sur les supports médias : Réseaux sociaux, site internet, newsletters, visuel sur nos véhicules, articles dans journaux locaux, et plus encore.",
+        
     },
+
     {
       number: "03",
       title: "UN AVANTAGE FISCAL",

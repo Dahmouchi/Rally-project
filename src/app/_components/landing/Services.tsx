@@ -251,6 +251,7 @@ const Services = () => {
       title: "Couverture médiatique internationale",
       description:
         "TV, presse, réseaux sociaux... votre marque sera mise en avant dans un contexte positif, engagé et inspirant.",
+        test:true,
     },
     {
       icon: (
@@ -272,7 +273,9 @@ const Services = () => {
       title: "Visibilité sur nos supports",
       description:
         "Notre véhicule et nos tenues, nos réseaux sociaux et contenus vidéo, les médias et événements liés au rallye.",
+         test:false,
     },
+   
     {
       icon: (
         <svg
@@ -293,6 +296,7 @@ const Services = () => {
       title: "Impact positif",
       description:
         "Associez votre image à la nôtre dans une aventure humaine à fort impact social et environnemental.",
+         test:false,
     },
   ];
 
@@ -435,6 +439,7 @@ const Services = () => {
                   {item.title}
                 </h3>
                 <p className="text-dark dark:text-gray-50">{item.description}</p>
+                {item.test && <div>« Vous pouvez télécharger <a href="/REVUE_MEDIAS_2025_A5.pdf" target="_blank" className="text-blue-500 underline cursor-pointer">la revue média</a> »</div>}
               </motion.div>
             ))}
           </motion.div>

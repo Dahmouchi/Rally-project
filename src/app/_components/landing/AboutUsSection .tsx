@@ -55,7 +55,7 @@ const teamMembers = [
     ],
     stats: [
       { label: "Années de pratique", value: "12+" },
-      { label: "Patientes suivies", value: "2000+" },
+      { label: "Rallye", value: "2+" },
       { label: "Tournois de padel", value: "25+" }
     ],
     color: "from-main to-main2"
@@ -92,7 +92,7 @@ const teamMembers = [
     ],
     stats: [
       { label: "Années d'expérience", value: "15+" },
-      { label: "Projets d'audit", value: "200+" },
+        { label: "Rallye", value: "2+" },
       { label: "Œuvres artistiques", value: "50+" }
     ],
     color: "from-main2 to-main"
